@@ -2,8 +2,8 @@ def image_generator(texto: str):
     from PIL import Image, ImageDraw, ImageFont
     import textwrap
     
-    font_loc = "/home/jtapiath/.fonts/Code New Roman.otf"
-    footer_loc = "/home/jtapiath/.fonts/Code New Roman b.otf"
+    font_loc = "static/resources/Code New Roman.otf"
+    footer_loc = "static/resources/Code New Roman b.otf"
     fontsize = 60
     footer = "@raspado_de_olla"
     
