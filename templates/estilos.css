@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:sans-serif;
+}
+.formulario {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.form_input, .form_label, .form_submit {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+}
+.form_input {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  border: 1px solid rgba(19, 145, 14, 0.3);
+}
+.form_input:focus {
+  outline: 1px solid rgba(19, 145, 145, 0.7);
+}
+.form_label {
+  text-align: center;
+  position: relative;
+  color: rgba(0, 0, 0, 0.4);
+}
+.form_submit {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
