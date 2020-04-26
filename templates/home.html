@@ -2,14 +2,15 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Texto presto</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
   </head>
   <body>
-    <form method="POST" class="formulario">
+    <form method="post" class="formulario" id="form_page" action="">
       <label for="" class="form_label">Escribe aquí tu texto</label>
-      <textarea class="form_input"></textarea>
-      <input type="submit" value="Generar imagen" class="form_submit">
+      <textarea class="form_input" id="textBox1" name="textBox1" form="form_page"></textarea>
+      <input type="submit" class="form_submit" value="Generar imagen" />
     </form>
   </body>
 </html>

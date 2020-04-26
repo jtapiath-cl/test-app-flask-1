@@ -20,25 +20,27 @@ def image_generator(texto: str):
     return img
 
 from flask import Flask, render_template, request, send_file, send_from_directory
+from flask import jsonify
+import os
+
+IMG_REPO = os.path.join("static", "imgs")
 
 app = Flask(__name__)
+app.config["IMG_FOLDER"] = IMG_REPO
 
 @app.route("/")
 def home():
     return render_template("home.html")
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["post", "get"])
 def generating_image():
-    import os
     from datetime import datetime
-
-    text_form = request.form["text"]    
+    text_form = request.form.get("textBox1")
     img_name = datetime.strftime(datetime.now(), "%Y%m%d%H%M%S") + "_img.png"
-    img_path = os.path.join(os.getcwd(), "static", "imgs", img_name)
+    img_path = os.path.join(app.config["IMG_FOLDER"], img_name)
     imagen = image_generator(text_form)
-    imagen.save(img_path)
-    
-    return send_from_directory("static/imgs", img_name, as_attachment = False, cache_timeout = 0)
+    imagen.save(img_path)    
+    return render_template("img.html", user_image = img_path)
 
 if __name__ == "__main__":
-    app.run(threaded = True, debug = False, port = 5000)
+    app.run(threaded = True, debug = True, port = 1337)

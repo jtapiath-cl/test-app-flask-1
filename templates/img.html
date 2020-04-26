@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Texto presto - Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+  </head>
+  <body>
+    <div id="img-render" class="img_holder" style="padding-top: 40px; padding-bottom: 40px;">
+      <img src="{{ user_image }}" alt="User Image">
+    </div>
+    <button onclick="window.location.href='/';" class="form_submit" style="max-width: 80%; margin: auto;">Crear otra imagen</button>
+  </body>
+</html>
