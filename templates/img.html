@@ -10,6 +10,9 @@
     <div id="img-render" class="img_holder" style="padding-top: 40px; padding-bottom: 40px; margin: auto;">
       <img src="{{ user_image }}" alt="User Image" class="center">
     </div>
-    <button onclick="window.location.href='/';" class="form_submit" style="max-width: 80%; margin: auto;">Crear otra imagen</button>
+    <button onclick="window.location.href='/get-image/{{ user_image }}';" class="form_submit" style="max-width: 80%; margin: auto; background: rgba(156, 0, 132, 0.7);">Descargar imagen</button>
+    <br>
+    <button onclick="window.location.href='/';" class="form_submit" style="max-width: 80%; margin: auto; background: rgba(7, 178, 127 ,0.7);">Crear otra imagen</button>
+    <br>
   </body>
 </html>
